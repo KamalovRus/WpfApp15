@@ -1,0 +1,146 @@
+﻿<Window x:Class="WpfApp15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <FlowDocumentScrollViewer>
+            <FlowDocument>
+                <Paragraph FontSize="20">
+                    <Floater Width="250" HorizontalAlignment="Right">
+                        <BlockUIContainer>
+                            <Image Source="Dotnet_3.5.png"/>
+                        </BlockUIContainer>
+                    </Floater>
+                    <Bold>Windows Presentation Foundation (WPF)</Bold> — аналог WinForms, система для построения клиентских приложений
+                    <Hyperlink NavigateUri="https://ru.wikipedia.org/wiki/Windows">Windows</Hyperlink> с визуально привлекательными возможностями взаимодействия с пользователем, графическая (презентационная) подсистема в составе
+                    <Hyperlink NavigateUri="https://ru.wikipedia.org/wiki/.NET_Framework">.NET Framework</Hyperlink> (начиная с версии 3.0), использующая язык
+                    <Hyperlink NavigateUri="https://ru.wikipedia.org/wiki/XAML">XAML</Hyperlink> .
+                </Paragraph>
+                <Paragraph>
+                    WPF предустановлена в
+                    <Italic>Windows Vista</Italic> (.NET Framework 3.0), Windows 7 (.NET Framework 3.5 SP1), Windows 8 (.NET Framework 4.0 и 4.5), Windows 8.1 (.NET Framework 4.5.1) и Windows 10 (.NET Framework 4.7). С помощью WPF можно создавать широкий спектр как автономных, так и запускаемых в
+                    <Run Foreground="DarkBlue">браузере приложений</Run> .
+                </Paragraph>
+                <List MarkerStyle="Decimal">
+                    <ListItem>
+                        <Paragraph>
+                            Особенности технологии
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Использование разметки XAMl
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Средства разработки
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Возможности
+                        </Paragraph>
+                        <List MarkerStyle="Decimal" Margin="0" Padding="35,0,0,0">
+                            <ListItem>
+                                <Paragraph>
+                                    Привязка данных
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    Стили
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    Шаблоны элементов управления
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    Шаблоны данных
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    Ресурсы
+                                </Paragraph>
+                            </ListItem>
+                            <ListItem>
+                                <Paragraph>
+                                    Графика
+                                </Paragraph>
+                            </ListItem>
+                        </List>
+                    </ListItem>
+                </List>
+                <Paragraph FontSize="20">
+                    Привязка данных
+                </Paragraph>
+                <Paragraph>
+                    Это гибкий механизм, который позволяет через расширения разметки XAML связывать различные данные (от значений свойств элементов управления до общедоступных свойств, реализующих поля базы данных через Entity Framework). Привязка данных представлена классом Binding, который в свою очередь унаследован от MarkupExtension, что позволяет использовать привязки не только в коде, но и в разметке:
+                </Paragraph>
+                <Paragraph>
+                    Помимо основного класса Binding в WPF реализовано еще несколько механизмов привязок:
+                </Paragraph>
+                <Table CellSpacing="20">
+                    <Table.Columns>
+                        <TableColumn/>
+                        <TableColumn/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    <Span Background="Purple">
+                                        
+
+                                    MultiBinding
+                                    </Span>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    <Span Background="MediumPurple">
+                                    TemplateBinding
+                                    </Span>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    <Span Background="Orange">
+                                        
+
+                                    PriorityBinding
+                                    </Span>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph FontSize="15">
+                                    позволяет создавать множественные привязки, указывая несколько элементов
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontSize="15">
+                                    используется в шаблонах для связывания свойства элемента внутри шаблона со свойством элемента, к которому применен шаблон
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontSize="15">
+                                    ранжирует список привязок и выбирает из них свойство (согласно приоритету) к которому будет применена привязка. Если привязка, имеющая наивысший приоритет успешно возвращает значение, то нет необходимости обрабатывать другие привязки в списке.
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Window>
